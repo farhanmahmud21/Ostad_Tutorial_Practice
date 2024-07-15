@@ -14,6 +14,10 @@ class HomeScreen extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.deepOrangeAccent,
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.home),
+          ),
           title: const Text(
             'App Bar Demo',
             style: TextStyle(
@@ -23,13 +27,18 @@ class HomeScreen extends StatelessWidget {
                 wordSpacing: 0.6,
                 letterSpacing: 0.5),
           ),
+          actions: [
+            IconButton(onPressed: () {}, icon: const Icon(Icons.notifications))
+          ],
           centerTitle: true,
           backgroundColor: Colors.amberAccent,
         ),
         body: const Center(
           child: Text(
             'This is a App Bar Demp',
-            style: TextStyle(fontSize: 24,),
+            style: TextStyle(
+              fontSize: 24,
+            ),
           ),
         ),
       ),
